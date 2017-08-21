@@ -1,12 +1,53 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/component/home/index",
+    "pages/component/article/index",
+    "pages/component/video/index",
+    "pages/component/trend/index",
+    "pages/component/mall/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "tabBar": {
+  "color": "#aaa",
+  "selectedColor": "#fff",
+  "borderStyle": "#333",
+  "backgroundColor": "#212121",
+  "list": [
+    {
+      "pagePath": "pages/component/home/index",
+      "iconPath": "images/home@recent.png",
+      "selectedIconPath": "images/home@recent_prs.png",
+      "text": "最新"
+    },
+    {
+      "pagePath": "pages/component/article/index",
+      "iconPath": "images/home@article.png",
+      "selectedIconPath": "images/home@article_prs.png",
+      "text": "文章"
+    },
+    {
+      "pagePath": "pages/component/video/index",
+      "iconPath": "images/home@video.png",
+      "selectedIconPath": "images/home@video_prs.png",
+      "text": "视频"
+    },
+    {
+      "pagePath": "pages/component/trend/index",
+      "iconPath": "images/home@trend.png",
+      "selectedIconPath": "images/home@trend_prs.png",
+      "text": "圈子"
+    },
+    {
+      "pagePath": "pages/component/mall/index",
+      "iconPath": "images/home@mall.png",
+      "selectedIconPath": "images/home@mall_prs.png",
+      "text": "Mall"
+    }
+  ]
+}
 }
