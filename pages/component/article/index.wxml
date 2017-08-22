@@ -1,4 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-
+  <view class="tab" style="position: fixed;top: 0;width: 100%; z-index: 10;backdrop-filter: blur(15px);">
+    <view class="tab-item tbi-cur">
+      <text class="tbi-text">默认</text>
+    </view>
+    <view class="tab-item">
+      <text class="tbi-text">热议</text>
+    </view>
+    <view class="tab-item">
+      <text class="tbi-text">好评</text>
+    </view>
+    <view class="tab-item" >
+      <text class="tbi-text">最近回帖</text>
+    </view>
+    <navigator url="../../parts/search/index" class="tab-item" id="lastsearch">
+      <icon type="search" size="18" color="#666" />
+    </navigator>
+  </view>
 </view>
