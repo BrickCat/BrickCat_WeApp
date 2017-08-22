@@ -5,7 +5,8 @@
     "pages/component/trend/index",
     "pages/component/mall/index",
     "pages/component/mine/index",
-    "pages/parts/search/index"
+    "pages/parts/search/index",
+    "pages/parts/template/template"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",

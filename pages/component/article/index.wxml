@@ -1,6 +1,7 @@
 <!--index.wxml-->
+<import src="../../template/template.wxml"/>
 <view class="container">
-  <view class="tab" style="position: fixed;top: 0;width: 100%; z-index: 10;backdrop-filter: blur(15px);">
+  <view id="header" class="tab">
     <view class="tab-item tbi-cur">
       <text class="tbi-text">默认</text>
     </view>
@@ -17,4 +18,10 @@
       <icon type="search" size="18" color="#666" />
     </navigator>
   </view>
+<view style="margin-top:70rpx;background-color:#000;color:#fff;height:80rpx;">
+ {{ message }}
+</view>
+  <navigator class="baseColor" id="float_btn">
+    <image src="../../../images/home@compass.png" class="float_btn_icon"></image>
+  </navigator>
 </view>

@@ -158,6 +158,10 @@ page {
     border-bottom:4rpx solid  #d33a31
   }
 
+.baseColor{
+  color: #dd5044;
+}
+
 .green{
     color: #09BB07;
 }
@@ -2452,3 +2456,4 @@ checkbox, radio{
   overflow: visible;
   clip: auto;
 }
+@import "pages/parts/template/template.wxss";
