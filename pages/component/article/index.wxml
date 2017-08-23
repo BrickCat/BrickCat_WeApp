@@ -2,25 +2,44 @@
 <import src="../../template/template.wxml"/>
 <view class="container">
   <view id="header" class="tab">
-    <view class="tab-item tbi-cur">
+    <view class="tab-item  {{rec.idx==tabidx?'tbi-cur':''}}" bindtap="switchtab" data-t="0">
       <text class="tbi-text">默认</text>
     </view>
-    <view class="tab-item">
+    <view class="tab-item"  bindtap="switchtab" data-t="1">
       <text class="tbi-text">热议</text>
     </view>
-    <view class="tab-item">
+    <view class="tab-item"  bindtap="switchtab" data-t="2">
       <text class="tbi-text">好评</text>
     </view>
-    <view class="tab-item" >
+    <view class="tab-item"  bindtap="switchtab" data-t="3">
       <text class="tbi-text">最近回帖</text>
     </view>
     <navigator url="../../parts/search/index" class="tab-item" id="lastsearch">
       <icon type="search" size="18" color="#666" />
     </navigator>
   </view>
-<view style="margin-top:70rpx;background-color:#000;color:#fff;height:80rpx;">
- {{ message }}
-</view>
+  <view wx:if="{{!rec.loading}}" id="album_loading">
+      <image src="../../../images/util@loading.png"></image>
+      正在为您加载中...
+  </view>
+
+  <view wx:else>
+    <scroll-view class="scroll_wapper" scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+      <view class="item" wx:for="{{articles}}">
+        <view class="article_list">
+          <view class="article_list_header">
+            <image class="thumbnai" src="{{item.articleAuthorThumbnailURL48}}"></image>
+            <view class="title">
+              <text class="name">{{item.articleAuthorName}}</text>
+            </view>
+          </view>
+          
+        </view>
+        <include src="../../parts/template/line.wxml" />
+      </view>
+    </scroll-view>
+  </view>
+
   <navigator class="baseColor" id="float_btn">
     <image src="../../../images/home@compass.png" class="float_btn_icon"></image>
   </navigator>

@@ -1,0 +1,23 @@
+<view id="search_header">
+  <view id="search_input">
+      <form bindsubmit="searhFinput">
+        <view class="form">
+          <view class="form_input">
+            <view>
+              <icon type="search" size="16" color="#aaa" />
+            </view>
+            <input type="text" auto-focus maxlength="20" name="name" bindinput="inputext" placeholder="搜索文章、视频、圈子等" value="{{value}}" />
+            <view class="sf_clear" hidden="{{!value}}" bindtap="clear_kw">
+              <icon type="clear" size="16" color="#aaa" />
+            </view>
+        </view>
+        <view class="button">
+          <button form-type="submit" plain="true">
+            搜索
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+

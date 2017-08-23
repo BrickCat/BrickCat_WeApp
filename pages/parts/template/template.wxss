@@ -1,0 +1,22 @@
+#float_btn{
+  right:0;
+  margin-right:56rpx;
+  bottom:56rpx;
+  height: 56rpx;
+  width: 56rpx;
+  position: fixed;
+  background-color: #fff;
+  border-radius: 40rpx;
+}
+.float_btn_icon{
+  width: 80rpx;
+  height: 80rpx;
+  background-color: rebeccapurple;
+  border-radius: 40rpx
+}
+.line{
+  height: 1rpx;
+  border-bottom : 1rpx dashed #CfCFCF;
+  width: 100%;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,11 @@
+/* index.wxss */
+#search_header{position: fixed;top:0;left: 0;width: 100%;z-index: 10;}
+#search_input{padding: 0 0 20rpx 20rpx;background-color: #dd5044;overflow: hidden;height: 60rpx;flex:0 0 60rpx;color: #fff}
+#search_input .form{display: flex;margin-top: 10rpx;}
+.form_input{flex: 1;position: relative;color: #fff;height: 60rpx;overflow: hidden}
+.form_input view{position: absolute;top: 0;z-index: 10;left: 0;padding:12rpx 15rpx  }
+.form_input .sf_clear{right: 0;left: auto}
+#search_input input{border:none;color: #515151;background-color: #ececec;
+border-radius:4rpx;font-size: 28rpx;padding: 0 60rpx;box-sizing: border-box;height: 60rpx;line-height:60rpx;display: block;}
+
+.button button{padding: 0 20rpx;height:60rpx;border: none;line-height: 60rpx;display:block;text-align: right;font-size: 30rpx;color: #fff}

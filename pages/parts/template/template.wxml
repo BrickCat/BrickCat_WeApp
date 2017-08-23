@@ -1,0 +1,5 @@
+<!--template.wxml-->
+<template name="line">
+  <view class="line">
+  </view>
+</template>
