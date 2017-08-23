@@ -1,5 +1,5 @@
 /* index.wxss */
-#search_header{position: fixed;top:0;left: 0;width: 100%;z-index: 10;}
+#search_header{height: 80rpx;position: fixed;top:0;left: 0;width: 100%;z-index: 10;}
 #search_input{padding: 0 0 20rpx 20rpx;background-color: #dd5044;overflow: hidden;height: 60rpx;flex:0 0 60rpx;color: #fff}
 #search_input .form{display: flex;margin-top: 10rpx;}
 .form_input{flex: 1;position: relative;color: #fff;height: 60rpx;overflow: hidden}
