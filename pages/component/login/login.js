@@ -1,66 +1,101 @@
-// login.js
+var calcMD5 = require('../../js/md5.js');
+var url = require('../../../utils/baseurl.js');
+var Util = require('../../../utils/util.js');
+var app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    needCaptcha: false,
+    captchaURL: '',
+    disabled: false
   },
-
   /**
-   * 生命周期函数--监听页面加载
+   * 初始化加载
+   * options url 参数
    */
   onLoad: function (options) {
-  
+    var that = this;
+    if (wx.getStorageSync('cookie')) {
+      that.setData({
+        disabled: true
+      })
+   }
   },
-
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 跳转到注册页面
    */
-  onReady: function () {
-  
+  goRegister: function () {
+    wx.navigateTo({
+      url: '../register/register'
+    })
   },
-
   /**
-   * 生命周期函数--监听页面显示
+   * 刷新验证码 
    */
-  onShow: function () {
-  
+  refreshCaptcha: function () {
+    this.setData({
+      captchaURL: url.url+'/login?needCaptcha=' + this.data.needCaptcha + '&t=' + (new Date()).getTime()
+    });
   },
-
   /**
-   * 生命周期函数--监听页面隐藏
+   * 登录
    */
-  onHide: function () {
-  
+  login: function (e) {
+    Util.networkStatus()
+    var that = this;
+    wx.request({
+      url: url.url+'/login',
+      data: {
+        nameOrEmail: e.detail.value.userName,
+        userPassword: calcMD5(e.detail.value.password),
+        rememberLogin: true,
+        captcha: e.detail.value.captcha
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.errMsg !== 'request:ok') {
+          wx.showToast({
+            title: res.errMsg,
+            icon: 'loading',
+            mask: true
+          })
+          return false;
+        }
+        if (!res.data.sc) {
+          if (res.data.needCaptcha) {
+            that.setData({
+              needCaptcha: res.data.needCaptcha,
+              captchaURL: url.url+'/captcha/login?needCaptcha=' + res.data.needCaptcha + '&t=0.6956869461435669'
+            });
+          }
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'loading',
+            mask: true
+          })
+          return false;
+        }
+
+        wx.setStorage({
+          key: "cookie",
+          data: res.data.token
+        })
+        wx.redirectTo({
+          url: '../article/index'
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: res.errMsg,
+          icon: 'loading',
+          mask: true
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  logout: function(){
+    app.logout();
   }
 })

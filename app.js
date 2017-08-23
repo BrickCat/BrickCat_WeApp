@@ -20,8 +20,20 @@ App({
       })
     }
   },
-
+  /**
+     * 登出
+     */
+  logout:function () {
+    var that = this;
+    wx.removeStorage({
+      key: 'cookie',
+      success: function (res) {
+        that.globalData.isLogin=false;
+      }
+    })
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isLogin:false
   }
 })

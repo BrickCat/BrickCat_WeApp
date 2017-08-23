@@ -11,11 +11,18 @@ Page({
       articles: [],
       currentPage: 0,
       isFinished: false,
-      tabidx: 0
+      tabidx: 0,
+      isLogin: app.globalData.isLogin
     },
 
     onLoad: function () {
-
+      var that = this;
+      if (wx.getStorageSync('cookie')) {
+          app.globalData.isLogin = true;
+      }
+      that.setData({
+        isLogin: true
+      })
     },
 
     onShow: function() {
@@ -66,6 +73,12 @@ Page({
       var that = this;
       var t = e.currentTarget.dataset.t;
       this.setData({ tabidx: t });
+    },
+    follow:function(){
+      console.info(11);
+      wx.redirectTo({
+        url: '../login/login'
+      })
     }
 })
 

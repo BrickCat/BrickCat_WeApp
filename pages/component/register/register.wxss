@@ -3,6 +3,7 @@
   min-height: 100%;
   font-size: 32rpx;
   color: #333;
+  background-color: #FFF;
 }
 
 .wrapper {

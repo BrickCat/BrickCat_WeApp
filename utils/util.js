@@ -16,7 +16,20 @@ function networkStatus() {
     }
   })
 }
-
+/**
+   * 登出
+   */
+function logout() {
+  var that = this;
+  wx.removeStorage({
+    key: 'cookie',
+    success: function (res) {
+      that.setData({
+        isLogin: false
+      })
+    }
+  })
+}
 module.exports = {
   networkStatus: networkStatus
 }

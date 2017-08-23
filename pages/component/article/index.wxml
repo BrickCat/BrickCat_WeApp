@@ -47,10 +47,10 @@
           ></image>
         </view>
         <view class="bottom-container flex-row">
-          <view class="bottom-tool flex-row flex-rest-width"  wx:if="{{item.articleCollectCnt != 0}}">
+          <view class="bottom-tool flex-row flex-rest-width" bindtap="follow" wx:if="{{item.articleCollectCnt != 0}}">
             <text class="bottom-tool-text"><text class="fa fa-star {{true==item.articleCollect?'red':''}}"></text>  <text class="{{true == item.articleCollect?'red':''}}">{{item.articleCollectCnt}}</text></text>
           </view>
-          <view class="bottom-tool flex-row flex-rest-width" wx:else>
+          <view class="bottom-tool flex-row flex-rest-width" bindtap="follow" wx:else>
             <text class="bottom-tool-text"><text class="fa fa-star-o"></text>  收藏</text>
           </view>
           <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleCommentCount != 0}}">
