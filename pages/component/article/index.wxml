@@ -27,7 +27,9 @@
    <scroll-view scroll-y="true" bindscrolltolower="scrollToLower" class="timeline">
       <view class="tweet-container" wx:for="{{articles}}" wx:key="id">
         <view class="top-container flex-row">
-          <image class="card-avatar" src="{{item.articleAuthorThumbnailURL48}}"></image>                
+          <navigator url="../../parts/search/index" class="card-avatar">
+            <image class="card-avatar" src="{{item.articleAuthorThumbnailURL48}}"></image> 
+          </navigator>               
           <view class="user-container">
             <text class="card-name">{{item.articleAuthorName}}</text>
             <text class="card-time">板砖猫 {{item.articleAuthor.userNo}} 号会员</text>
@@ -45,20 +47,20 @@
           ></image>
         </view>
         <view class="bottom-container flex-row">
-          <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleCollectCnt != 0}}">
-            <text class="bottom-tool-text"><text class="fa fa-star-o"></text>  {{item.articleCollectCnt}}</text>
+          <view class="bottom-tool flex-row flex-rest-width"  wx:if="{{item.articleCollectCnt != 0}}">
+            <text class="bottom-tool-text"><text class="fa fa-star {{true==item.articleCollect?'red':''}}"></text>  <text class="{{true == item.articleCollect?'red':''}}">{{item.articleCollectCnt}}</text></text>
           </view>
           <view class="bottom-tool flex-row flex-rest-width" wx:else>
             <text class="bottom-tool-text"><text class="fa fa-star-o"></text>  收藏</text>
           </view>
           <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleCommentCount != 0}}">
-            <text class="bottom-tool-text"><text class="fa fa-commenting-o"></text>  {{item.articleCommentCount}}</text>
+            <text class="bottom-tool-text"><text class="fa fa-commenting{{true ==item.articleComment?' red':'' }}"></text><text class="{{true ==item.articleComment?' red':'' }}">  {{item.articleCommentCount}}</text></text>
           </view>
           <view class="bottom-tool flex-row flex-rest-width" wx:else>
           <text class="bottom-tool-text"><text class="fa fa-commenting-o"></text>  回帖</text>
           </view>
           <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleGoodCnt != 0}}">
-            <text class="bottom-tool-text"><text class="fa fa-thumbs-o-up {{}}"></text> {{item.articleGoodCnt}}</text>
+            <text class="bottom-tool-text"><text class="fa fa-thumbs-up {{0==item.articleVote?'red':''}}"></text> <text class="{{0==item.articleVote?'red':''}}">{{item.articleGoodCnt}}</text></text>
           </view>
           <view wx:else class="bottom-tool flex-row flex-rest-width">
             <text class="bottom-tool-text"><text class="fa fa-thumbs-o-up {{}}"></text> 赞</text>
@@ -68,7 +70,7 @@
     </scroll-view>
   </view>
 
-  <navigator class="baseColor" id="float_btn">
+  <navigator class="baseColor" url="../../parts/put/index" id="float_btn">
     <image src="../../../images/home@compass.png" class="float_btn_icon"></image>
   </navigator>
 </view>

@@ -6,7 +6,9 @@
     "pages/component/mall/index",
     "pages/component/mine/index",
     "pages/parts/search/index",
-    "pages/parts/template/template"
+    "pages/parts/template/template",
+    "pages/parts/put/index",
+    "pages/component/login/login"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",
