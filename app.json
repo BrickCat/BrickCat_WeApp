@@ -9,7 +9,8 @@
     "pages/parts/template/template",
     "pages/parts/put/index",
     "pages/component/login/login",
-    "pages/component/register/register"
+    "pages/component/register/register",
+    "pages/component/mine/setting/setting"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",

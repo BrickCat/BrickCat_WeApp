@@ -34,6 +34,7 @@ App({
             wx.removeStorage({
               key: 'cookie',
               success: function (res) {
+                wx.removeStorageSync('user');
                 toast.showToast({
                   context: i,
                   title: '已退出',
@@ -55,5 +56,12 @@ App({
   globalData: {
     userInfo: null,
     userId:null
+  },
+  toastTo:function(i,title){
+    toast.showToast({
+      context: i,
+      title: title,
+      duration: 1500
+    })
   }
 })

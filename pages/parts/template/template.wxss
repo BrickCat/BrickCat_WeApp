@@ -1,7 +1,7 @@
 #float_btn{
   right:0;
-  margin-right:56rpx;
-  bottom:56rpx;
+  margin-right:76rpx;
+  bottom:76rpx;
   height: 56rpx;
   width: 56rpx;
   position: fixed;

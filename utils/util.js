@@ -16,6 +16,7 @@ function networkStatus() {
     }
   })
 }
+
 /**
    * 登出
    */

@@ -1,2 +1,5 @@
 <view class="container">
+  <include src="../../template/toast.wxml"/>
+  <video class="video" autoplay="{{video.autoplay}}" src="https://brickcat.club/file/m3u8/ee8e7a4204144a399ce97d76f4622bf7/ee8e7a4204144a399ce97d76f4622bf7.m3u8" ></video>
+
 </view>
