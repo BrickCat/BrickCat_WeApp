@@ -9,9 +9,15 @@ Page({
       tStart: false
     },
     activeTab: 0,
-    user:wx.getStorageSync('user')
+    user : null
   },
   onLoad: function (options) {
+    var that = this;
+    if (wx.getStorageSync('user')){
+      that.setData({
+        user: wx.getStorageSync('user')
+      })
+    }
     try {
       let { tabs } = this.data;
       var res = wx.getSystemInfoSync()

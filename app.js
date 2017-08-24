@@ -52,16 +52,5 @@ App({
         duration: 1500
       })
     }
-  },
-  globalData: {
-    userInfo: null,
-    userId:null
-  },
-  toastTo:function(i,title){
-    toast.showToast({
-      context: i,
-      title: title,
-      duration: 1500
-    })
   }
 })
