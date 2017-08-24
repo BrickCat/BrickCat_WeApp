@@ -78,8 +78,8 @@ Page({
           return false;
         }
         wx.setStorage({
-          key: "userid",
-          data: res.data.userId
+          key: "user",
+          data: res.data.user
         })
 
         wx.setStorage({

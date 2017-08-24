@@ -1,7 +1,25 @@
-<view class="">
+<view class="container">
 <include src="../../template/toast.wxml"/>
-
-
-
-<button bindtap="logout" type="warn" style="margin:0 5%;width:90%;bottom:50rpx;position: fixed;">退出登录</button>
+<view class="user">
+    <view class="useravatar">
+      <view class="fa fa-cog icon" style="margin-top:30rpx;margin-left:30rpx;"></view>
+      <view class="userinfo-avatar">
+        <image style="width:160rpx;height:160rpx; border-radius: 80rpx;" src="{{user.userAvatarURL}}" ></image>
+      </view>
+    </view>
+    <view class="userinfo">
+      <view class="username">
+        <text>{{user.userName}}</text>
+      </view>
+      <view class="userpoint">
+        <text>
+          <text class="fa fa-gg-circle" style="color:#FFCE43"></text> 积分 ：{{user.userPoint}}
+        </text>
+      </view>
+    </view>
 </view>
+
+
+
+</view>
+<button bindtap="logout" type="warn" style="margin:0 5%;width:90%;bottom:50rpx;position: fixed;">退出登录</button>

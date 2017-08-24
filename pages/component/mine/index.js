@@ -2,6 +2,7 @@ var app = getApp()
 
 Page({
   data: {
+    user:wx.getStorageSync('user')
   },
 
   onLoad: function () {
