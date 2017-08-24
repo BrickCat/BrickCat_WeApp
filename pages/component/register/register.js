@@ -1,7 +1,8 @@
 var Util = require('../../../utils/util.js');
+var url = require('../../../utils/baseurl.js');
 Page({
   data: {
-    captchaURL: 'https://hacpai.com/captcha'
+    captchaURL: url.url+'/captcha'
   },
   /**
    * 跳转到登录页面
@@ -16,7 +17,7 @@ Page({
    */
   refreshCaptcha: function () {
     this.setData({
-      captchaURL: 'https://hacpai.com/captcha?' + (new Date()).getTime()
+      captchaURL: url.url+'/captcha?' + (new Date()).getTime()
     });
   },
   /**
@@ -26,7 +27,7 @@ Page({
     Util.networkStatus()
     var that = this;
     wx.request({
-      url: 'https://hacpai.com/register',
+      url: url.url+'/register',
       data: {
         userName: e.detail.value.userName,
         userEmail: e.detail.value.userEmail,

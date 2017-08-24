@@ -1,3 +1,7 @@
 <view class="">
+<include src="../../template/toast.wxml"/>
 
+
+
+<button bindtap="logout" type="warn" style="margin:0 5%;width:90%;bottom:50rpx;position: fixed;">退出登录</button>
 </view>

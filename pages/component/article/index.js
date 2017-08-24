@@ -11,15 +11,11 @@ Page({
       articles: [],
       currentPage: 0,
       isFinished: false,
-      tabidx: 0,
-      isLogin: app.globalData.isLogin
+      tabidx: 0
     },
 
     onLoad: function () {
       var that = this;
-      if (wx.getStorageSync('cookie')) {
-          app.globalData.isLogin = true;
-      }
       that.setData({
         isLogin: true
       })
@@ -74,11 +70,31 @@ Page({
       var t = e.currentTarget.dataset.t;
       this.setData({ tabidx: t });
     },
-    follow:function(){
-      console.info(11);
-      wx.redirectTo({
-        url: '../login/login'
-      })
+    /**
+     * 收藏
+     */
+    follow: function (event){
+      if (wx.getStorageSync('cookie')) {
+        var articleId = event.currentTarget.dataset.articleid;
+        var userId = wx.getStorageSync('userid');
+        console.info(userId);
+      }else{
+        wx.navigateTo({
+          url: '../login/login'
+        })
+      }
+    },
+    /**
+     * 取消收藏
+     */
+    unfollow: function (event){
+      if (wx.getStorageSync('cookie')) {
+
+      } else {
+        wx.navigateTo({
+          url: '../login/login'
+        })
+      }
     }
 })
 

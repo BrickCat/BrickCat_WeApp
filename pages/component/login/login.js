@@ -77,13 +77,17 @@ Page({
           })
           return false;
         }
+        wx.setStorage({
+          key: "userid",
+          data: res.data.userId
+        })
 
         wx.setStorage({
           key: "cookie",
           data: res.data.token
         })
-        wx.redirectTo({
-          url: '../article/index'
+        wx.navigateBack({
+          delta: 1
         })
       },
       fail: function (res) {
@@ -94,8 +98,5 @@ Page({
         })
       }
     })
-  },
-  logout: function(){
-    app.logout();
   }
 })

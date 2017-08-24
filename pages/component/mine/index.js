@@ -10,4 +10,7 @@ Page({
 
   onShow: function () {
   },
+  logout: function () {
+    app.logout(this);
+  }
 })

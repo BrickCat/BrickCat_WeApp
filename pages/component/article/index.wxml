@@ -47,22 +47,22 @@
           ></image>
         </view>
         <view class="bottom-container flex-row">
-          <view class="bottom-tool flex-row flex-rest-width" bindtap="follow" wx:if="{{item.articleCollectCnt != 0}}">
+          <view class="bottom-tool flex-row flex-rest-width" bindtap="unfollow" data-articleId="{{item.oId}}" wx:if="{{item.articleCollectCnt != 0}}">
             <text class="bottom-tool-text"><text class="fa fa-star {{true==item.articleCollect?'red':''}}"></text>  <text class="{{true == item.articleCollect?'red':''}}">{{item.articleCollectCnt}}</text></text>
           </view>
-          <view class="bottom-tool flex-row flex-rest-width" bindtap="follow" wx:else>
+          <view class="bottom-tool flex-row flex-rest-width" bindtap="follow" data-articleId="{{item.oId}}" wx:else>
             <text class="bottom-tool-text"><text class="fa fa-star-o"></text>  收藏</text>
           </view>
-          <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleCommentCount != 0}}">
+          <view class="bottom-tool flex-row flex-rest-width" data-articleId="{{item.oId}}" wx:if="{{item.articleCommentCount != 0}}">
             <text class="bottom-tool-text"><text class="fa fa-commenting{{true ==item.articleComment?' red':'' }}"></text><text class="{{true ==item.articleComment?' red':'' }}">  {{item.articleCommentCount}}</text></text>
           </view>
-          <view class="bottom-tool flex-row flex-rest-width" wx:else>
+          <view class="bottom-tool flex-row flex-rest-width" data-articleId="{{item.oId}}" wx:else>
           <text class="bottom-tool-text"><text class="fa fa-commenting-o"></text>  回帖</text>
           </view>
-          <view class="bottom-tool flex-row flex-rest-width" wx:if="{{item.articleGoodCnt != 0}}">
+          <view class="bottom-tool flex-row flex-rest-width" data-articleId="{{item.oId}}" wx:if="{{item.articleGoodCnt != 0}}">
             <text class="bottom-tool-text"><text class="fa fa-thumbs-up {{0==item.articleVote?'red':''}}"></text> <text class="{{0==item.articleVote?'red':''}}">{{item.articleGoodCnt}}</text></text>
           </view>
-          <view wx:else class="bottom-tool flex-row flex-rest-width">
+          <view wx:else class="bottom-tool flex-row flex-rest-width" data-articleId="{{item.oId}}">
             <text class="bottom-tool-text"><text class="fa fa-thumbs-o-up {{}}"></text> 赞</text>
           </view>
         </view>

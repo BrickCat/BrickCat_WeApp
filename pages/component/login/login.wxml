@@ -9,6 +9,5 @@
     </view>
     <button disabled="{{disabled}}" type="primary" form-type="submit">登录</button>
     <button bindtap="goRegister">注册</button>
-    <button bindtap="logout">登出</button>
   </form>
 </view>
