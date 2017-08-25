@@ -1,0 +1,26 @@
+/* setting.wxss */
+.setting-net{
+  width: 100%;
+  margin-top: 30rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
+  height: 80rpx;
+  background-color: #fff;
+  line-height: 100%;
+}
+.setting-net text{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 30rpx;
+}
+.setting-net image{
+  width: 56rpx;
+  height: 56rpx;
+  margin-top: 12rpx;
+  margin-left: 30rpx;
+}
+.setting-net switch{
+  margin-left: 230rpx;
+  margin-top: 1rpx;
+  height: 10rpx;
+}

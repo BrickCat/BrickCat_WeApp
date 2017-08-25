@@ -1,0 +1,9 @@
+<!--setting.wxml-->
+<include src="../../../template/toast.wxml"/>
+<view class="flex-row setting-net">
+  <image src="../../../../images/setting@wifi.png"></image>
+  <text>3G自动播放</text>
+  <switch type="switch" bindchange="listenerSwitch"/>
+</view>
+
+<button bindtap="logout" type="warn" style="margin:0 5%;width:90%;bottom:50rpx;position: fixed;">退出登录</button>
