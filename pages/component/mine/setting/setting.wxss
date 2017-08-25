@@ -2,7 +2,7 @@
 .setting-net{
   width: 100%;
   margin-top: 30rpx;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
   height: 80rpx;
   background-color: #fff;
@@ -11,16 +11,63 @@
 .setting-net text{
   height: 80rpx;
   line-height: 80rpx;
-  margin: 0 30rpx;
+  margin: 0 35rpx;
+  color: #6d6d6d;
+  font-size: 34rpx;
+}
+.item-first{
+  height: 80rpx;
+  border-top: 1px solid #CCC;
+  background-color: #fff;
+}
+.item-last{
+  height: 80rpx;
+  border-bottom: 1px solid #CCC;
+  background-color: #fff;
+}
+.item{
+  height: 80rpx;
+  border-top: 1px solid #CCC;
+  background-color: #fff;
 }
 .setting-net image{
-  width: 56rpx;
-  height: 56rpx;
-  margin-top: 12rpx;
-  margin-left: 30rpx;
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 19rpx;
+  margin-left: 37.5rpx;
 }
 .setting-net switch{
   margin-left: 230rpx;
   margin-top: 1rpx;
   height: 10rpx;
+}
+.my{
+  margin: 15rpx 0 0 0;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 2px #ebebeb;
+}
+.my .my-item{
+  width: 100%;
+  background: #ffffff;
+  padding: 0;
+  height: 80rpx;
+}
+.my .my-item .myitem-icon{
+  flex: 1;
+}
+.my .my-item .myitem-icon image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 20rpx 0;
+}
+.my .my-item .myitem-name{
+  flex: 5;
+  text-align: left;
+  font-size: 34rpx;
+  color: #6d6d6d;
+  line-height: 80rpx;
+  border-bottom: solid 1px #ebebeb;
+}
+.my .my-item:last-child .myitem-name{
+  border-bottom: none;
 }
