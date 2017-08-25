@@ -26,7 +26,7 @@
   width: 20rpx;
 }
 .user .useravatar .userinfo-avatar{
-  flex: 1.7;
+  flex: 1.8;
   width: 160rpx;
   height: 160rpx;
  margin-top: 30rpx;

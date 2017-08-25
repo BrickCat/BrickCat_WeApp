@@ -2,7 +2,9 @@
 <include src="../../template/toast.wxml"/>
 <view class="user">
     <view class="useravatar">
-      <view class="fa fa-cog icon" style="margin-top:50rpx;margin-left:50rpx;" bindtap="settingTo"></view>
+      <view class="icon" style="margin-top:50rpx;margin-left:50rpx;" bindtap="settingTo">
+        <image src="../../../images/mine@set.png" style="height:42rpx;width:42rpx;"></image>
+      </view>
       <view class="userinfo-avatar">
         <image style="width:160rpx;height:160rpx; border-radius: 80rpx;border: 1rpx solid #F0F4F3;" src="{{user.userAvatarURL}}" ></image>
       </view>

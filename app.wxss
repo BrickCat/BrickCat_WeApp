@@ -75,7 +75,7 @@ scroll-view, input, text{
 }
 
 .flex-item{
-  flex-grow: 1;
+  flex-grow: 0.1;
   text-align: center;
 }
 

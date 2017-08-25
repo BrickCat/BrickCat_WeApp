@@ -37,9 +37,7 @@
   margin-left: 37.5rpx;
 }
 .setting-net switch{
-  margin-left: 230rpx;
-  margin-top: 1rpx;
-  height: 10rpx;
+  margin: 12rpx 280rpx;
 }
 .my{
   margin: 15rpx 0 0 0;

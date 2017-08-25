@@ -1,7 +1,7 @@
 <!--setting.wxml-->
 <include src="../../../template/toast.wxml"/>
 <view class="container">
-  <view class="flex-row setting-net">
+  <view class="flex-wrp setting-net">
     <image src="../../../../images/setting@wifi.png"></image>
     <text>3G自动播放</text>
     <switch type="switch" bindchange="listenerSwitch"/>
@@ -14,7 +14,7 @@
       <view class="myitem-name flex-item">
         <text>我的关注</text>
       </view>
-      <view class="fa fa-caret-right" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
+      <view class="fa fa-caret-right flex-item" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
     </view>
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
@@ -23,16 +23,16 @@
       <view class="myitem-name flex-item">
         <text>我的收藏</text>
       </view>
-      <view class="fa fa-caret-right" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
+      <view class="fa fa-caret-right flex-item" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
     </view>
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
-        <image src="../../../../images/setting@wifi.png"></image>
+        <image src="../../../../images/setting@key.png"></image>
       </view>
       <view class="myitem-name flex-item">
         <text>我的草稿</text>
       </view>
-      <view class="fa fa-caret-right" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
+      <view class="fa fa-caret-right flex-item" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
     </view>
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
@@ -41,7 +41,7 @@
       <view class="myitem-name flex-item">
         <text>最近浏览</text>
       </view>
-      <view class="fa fa-caret-right" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
+      <view class="fa fa-caret-right flex-item" style="margin-top:20rpx;margin-right:20rpx;color:#ddd;"></view>
     </view>
  </view>
 
