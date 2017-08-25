@@ -36,9 +36,7 @@
   margin-top: 19rpx;
   margin-left: 37.5rpx;
 }
-.setting-net switch{
-  margin: 12rpx 280rpx;
-}
+
 .my{
   margin: 15rpx 0 0 0;
   border-top: solid 1px #ebebeb;
